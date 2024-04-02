@@ -8,7 +8,8 @@ export default function Header() {
     <header className="flex  items-center justify-between">
       <Link className="text-primary font-semibold text-xl  font-serif" href="/">
         <span>
-          <b className="font-mono">&lt;/&gt;</b> BISWAJIT
+          {/* <b className="font-mono">&lt;/&gt;</b> */}
+          BISWAJIT
         </span>
       </Link>
       {/* <nav className="flex gap-8 items-center font-semibold ">
