@@ -8,7 +8,7 @@ export default function Header() {
     <header className="flex  items-center justify-between">
       <Link className="text-primary font-semibold text-xl  font-serif" href="/">
         <span>
-          <b className="font-mono">&lt;/&gt;</b>
+          {/* <b className="font-mono">&lt;/&gt;</b> */}
           BISWAJIT
         </span>
       </Link>
