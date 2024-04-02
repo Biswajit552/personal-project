@@ -34,7 +34,7 @@ export default function Header() {
         </Link>
         <Link href="/project" className="block overflow-hidden ">
           <div className="h-[20px] hover:-translate-y-5 hover:duration-300 duration-300">
-            <span className="flex h-[20px] items-center">Project's</span>
+            <span className="flex h-[20px] items-center"> Project&lsquo;s</span>
             <span className="flex h-[20px] items-center text-black">
               Project&lsquo;s
             </span>
