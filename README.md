@@ -1,4 +1,5 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+Website is Live check-out= "https://personal-project-jet-gamma.vercel.app/"
 
 ## Getting Started
 
