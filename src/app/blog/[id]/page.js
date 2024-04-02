@@ -15,7 +15,7 @@ export default function BlogId() {
         });
       });
     }
-  }, []);
+  }, [id]);
   return (
     <section className="mx-auto text-center mt-5 flex flex-col p-5 scroll-smooth ">
       <h1 className="text-2xl font-serif mb-2 ">{order?.title}</h1>
