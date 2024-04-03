@@ -24,11 +24,7 @@ export default function BlogId() {
         <p>{new Date(order.updatedAt).toString().slice(16, 24)}</p>
       </div>
       <div className="font-serif text-xl">
-        <img
-          src={order?.image}
-          alt=""
-          className="w-full h-[500px] object-cover p-2"
-        />
+        <img src={order?.image} alt="" className="w-full h-auto  p-2" />
         <p className="mt-5 text-gray-600">
           <span className="font-bold font-mono my-2 text-gray-800">
             {" "}
