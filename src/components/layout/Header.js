@@ -66,7 +66,7 @@ export default function Header() {
           className="md:hidden p-4 bg-gray-200 rounded-lg mt-2 flex flex-col gap-2 text-center z-0 absolute top-12 left-60 right-0"
         >
           <Link href="/">Home</Link>
-          <Link href="project">Project's</Link>
+          <Link href="project">Project</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/#about">About</Link>
           <Link href="/#contact">Contact</Link>
