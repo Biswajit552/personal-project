@@ -3,9 +3,9 @@ import Right from "../icons/Right";
 
 export default function Hero() {
   return (
-    <section className="hero md:mt-4 flex ">
-      <div className="py-8 md:py-12">
-        <h1 className="text-4xl font-semibold">
+    <section className="mt-5 md:mt-2   ">
+      <div className=" md:py-5 flex ">
+        <h1 className=" text-xl font-serif md:text-4xl  md:mt-10 font-semibold">
           Everything
           <br />
           is better
@@ -13,7 +13,14 @@ export default function Hero() {
           with a&nbsp;
           <span className="text-primary">Technology</span>
         </h1>
-        <p className="my-6 text-gray-500 text-sm">
+        <img
+          src={"/c1.jpg"}
+          alt={"coding"}
+          className="rounded-3xl w-[180px]  object-fill md:w-[400px] hover:scale-105 duration-1000"
+        />
+      </div>
+      <div>
+        <p className="my-5 text-gray-500 text-sm">
           Technology is the missing piece that makes every day complete, a
           simple yet mordern joy of life 🥰🥰🥰
         </p>
@@ -22,13 +29,6 @@ export default function Hero() {
           Learn more
           <Right />
         </button>
-      </div>
-      <div>
-        <img
-          src={"/c1.jpg"}
-          alt={"coding"}
-          className="rounded-3xl w-[680px] hover:scale-105 duration-1000"
-        />
       </div>
     </section>
   );

@@ -19,10 +19,10 @@ export default function MenuItemForm({ onsubmit, menuItem }) {
       className="mt-8 max-w-3xl mx-auto"
     >
       <div
-        className="flex items-start gap-4 "
+        className="flex md:flex-row flex-col items-start gap-4 "
         // style={{ gridTemplateColumns: ".3fr .7fr" }}
       >
-        <div className="w-[300px]">
+        <div className="md:w-[300px] w-[250px] mx-auto ">
           <EditableImage link={image} setLink={setImage} />
         </div>
         <div className="flex flex-col ">

@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-<b>Website is Live click this Link ="https://biswajit-swain.vercel.app/"</b>
+<b>Website is Live click this Link ="https://biswajitswain.vercel.app/"</b>
 
 First, run the development server:
 
