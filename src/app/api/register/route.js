@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 import { User } from "../../../models/User";
-import dotenv from "dotenv";
 import bcrypt from "bcrypt";
-dotenv.config({ path: "../../../.env" });
 export async function POST(req) {
   const body = await req.json();
   mongoose.connect(process.env.MONGO_URL);

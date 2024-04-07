@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
 import { Suspense, useEffect, useState } from "react";
-import Slider from "@madzadev/image-slider";
-import Image from "next/image";
 import ImageSlider from "@/components/layout/ImageSlider";
 
 export default function Project() {
