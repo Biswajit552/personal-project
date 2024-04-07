@@ -6,7 +6,6 @@ import toast from "react-hot-toast";
 
 export default function CreateBlog() {
   const [redirectToItems, setRedirectToItems] = useState(false);
-  console.log(redirectToItems);
 
   const handleCreate = async (e, data) => {
     e.preventDefault();

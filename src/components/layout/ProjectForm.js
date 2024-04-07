@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import EditableImage from "../../components/layout/EditableImage";
+import Multiplefile from "./Multiplefile";
 
-export default function MenuItemForm({ onsubmit, menuItem }) {
+export default function ProjectForm({ onsubmit, menuItem }) {
   const [title, setTitle] = useState(menuItem?.name || "");
   const [description, setDescription] = useState(menuItem?.description || "");
   const [image, setImage] = useState(menuItem?.image || "");
@@ -23,7 +23,7 @@ export default function MenuItemForm({ onsubmit, menuItem }) {
         // style={{ gridTemplateColumns: ".3fr .7fr" }}
       >
         <div className="md:w-[300px] w-[250px] mx-auto ">
-          <EditableImage link={image} setLink={setImage} />
+          <Multiplefile link={image} setLink={setImage} />
         </div>
         <div className="flex flex-col mx-auto ">
           <label>Blog Title:-</label>

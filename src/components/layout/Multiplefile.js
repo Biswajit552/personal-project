@@ -2,9 +2,10 @@
 import Image from "next/image";
 import toast from "react-hot-toast";
 
-export default function EditableImage({ link, setLink }) {
+export default function Multiplefile({ link, setLink }) {
   async function handleFileChange(ev) {
     const files = ev.target.files;
+    console.log(files);
     if (files?.length === 1) {
       const data = new FormData();
       data.set("file", files[0]);
@@ -46,7 +47,12 @@ export default function EditableImage({ link, setLink }) {
         </div>
       )}
       <label>
-        <input type="file" className="hidden" onChange={handleFileChange} />
+        <input
+          type="file"
+          className="hidden"
+          onChange={handleFileChange}
+          multiple
+        />
         <span className="block border border-gray-300 rounded-lg p-2 text-center cursor-pointer">
           Add image
         </span>

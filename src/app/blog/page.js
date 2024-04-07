@@ -20,7 +20,7 @@ export default function Blog() {
       // setLoadingState(true);
     });
   }, []);
-  // console.log(menuItems);
+  console.log(menuItems);
 
   return (
     <>
@@ -68,7 +68,7 @@ export default function Blog() {
                       </h1>
                       <div className="flex mb-2 text-sm font-semibold text-gray-500 items-center justify-between md:mb-4">
                         {/* <p>@{post.username}</p> */}
-                        <div className="flex flex-col md:flex-row space-x-2">
+                        <div className="flex  md:flex-row space-x-2">
                           <p>
                             {new Date(item.updatedAt).toString().slice(0, 15)}
                           </p>

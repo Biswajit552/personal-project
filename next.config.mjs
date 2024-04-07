@@ -10,6 +10,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "biswa-food-ordering.s3.amazonaws.com",
       },
+      { protocol: "https", hostname: "firebasestorage.googleapis.com" },
     ],
   },
 };

@@ -5,3 +5,149 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
+/*======================
+    404 page
+=======================*/
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: "Arvo", serif;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+}
+.contant_box_404 {
+  margin-top: -50px;
+}
+select,
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="text"] {
+  @apply block w-full mb-2 rounded-xl;
+  @apply border p-2 border-gray-300 bg-gray-100;
+}
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="tel"]:disabled,
+input[type="text"]:disabled {
+  @apply bg-gray-800 border-0 cursor-not-allowed  text-white;
+}
+label {
+  @apply text-gray-700 text-sm leading-tight;
+}
+label + input {
+  margin-top: -2px;
+}
+button,
+.button {
+  @apply flex w-full justify-center gap-2 text-gray-700 font-semibold;
+  @apply border border-gray-300 rounded-xl px-6 py-2;
+}
+button[type="submit"],
+.submit,
+button.primary {
+  @apply border-primary bg-primary text-white;
+}
+button[type="submit"]:disabled,
+.submit:disabled {
+  @apply cursor-not-allowed bg-red-400;
+}
+div.tabs > * {
+  @apply bg-gray-300 text-gray-700 rounded-full py-2 px-4;
+}
+div.tabs > *.active {
+  @apply bg-primary text-white;
+}
+
+@media only screen and (min-width: 600px) {
+  .hero-image {
+    width: 50%;
+  }
+  .hero-heading {
+    margin-top: 15px;
+    font-size: 30px;
+    line-height: 1.5;
+    margin-left: 25px;
+  }
+}
+@media only screen and (min-width: 430px) and (max-width: 479px) {
+  .hero-image {
+    width: 48%;
+  }
+  .hero-heading {
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-left: 25px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 600px) {
+  .hero-image {
+    width: 50%;
+  }
+  .hero-heading {
+    margin-top: 18px;
+    font-size: 27px;
+    line-height: 1.5;
+    margin-left: 22px;
+  }
+}
+.swiper-button-disabled {
+  display: none !important;
+}
+/* .swiper-button-next {
+  background-color: white;
+  right: 10px;
+  padding: 30px;
+  color: #000 !important;
+  fill: black !important;
+  stroke: black !important;
+}
+.swiper-button-prev {
+  background-color: white;
+  right: 10px;
+  padding: 30px;
+  color: #000 !important;
+  fill: black !important;
+  stroke: black !important;
+} */
+.swiper-button-next {
+  opacity: 0;
+}
+.swiper-button-prev {
+  opacity: 0;
+}
+.swiper:hover {
+  .swiper-button-next {
+    opacity: 1;
+  }
+  .swiper-button-prev {
+    opacity: 1;
+  }
+}

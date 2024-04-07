@@ -3,43 +3,48 @@
 import Link from "next/link";
 import { useContext, useState } from "react";
 import Bars2 from "../icons/Bars2";
+import { signOut, useSession } from "next-auth/react";
 
-// function AuthLinks({status, userName}) {
-//   if (status === 'authenticated') {
-//     return (
-//       <>
-//         <Link href={'/profile'} className="whitespace-nowrap">
-//           Hello, {userName}
-//         </Link>
-//         <button
-//           onClick={() => signOut()}
-//           className="bg-primary rounded-full text-white px-8 py-2">
-//           Logout
-//         </button>
-//       </>
-//     );
-//   }
-//   if (status === 'unauthenticated') {
-//     return (
-//       <>
-//         <Link href={'/login'}>Login</Link>
-//         <Link href={'/register'} className="bg-primary rounded-full text-white px-8 py-2">
-//           Register
-//         </Link>
-//       </>
-//     );
-//   }
-// }
+function AuthLinks({ status, userName }) {
+  if (status === "authenticated") {
+    return (
+      <>
+        <Link href={"/profile"} className="whitespace-nowrap">
+          Hello, {userName}
+        </Link>
+        <button
+          onClick={() => signOut()}
+          className="bg-primary rounded-full text-white px-8 py-2"
+        >
+          Logout
+        </button>
+      </>
+    );
+  }
+  if (status === "unauthenticated") {
+    return (
+      <>
+        <Link href={"/login"}>Login</Link>
+        <Link
+          href={"/register"}
+          className="bg-primary rounded-full text-white px-8 py-2"
+        >
+          Register
+        </Link>
+      </>
+    );
+  }
+}
 export default function Header() {
-  // const session = useSession();
-  // const status = session?.status;
-  // const userData = session.data?.user;
-  // let userName = userData?.name || userData?.email;
+  const session = useSession();
+  const status = session?.status;
+  const userData = session.data?.user;
+  let userName = userData?.name || userData?.email;
   // const {cartProducts} = useContext(CartContext);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  // if (userName && userName.includes(' ')) {
-  //   userName = userName.split(' ')[0];
-  // }
+  if (userName && userName.includes(" ")) {
+    userName = userName.split(" ")[0];
+  }
   return (
     <header>
       <div className="flex items-center md:hidden justify-between">
@@ -53,7 +58,7 @@ export default function Header() {
           </span>
         </Link>
         <button
-          className="p-1 border"
+          className="p-2 border w-14 fixed top-3 right-4"
           onClick={() => setMobileNavOpen((prev) => !prev)}
         >
           <Bars2 />
@@ -63,21 +68,14 @@ export default function Header() {
       {mobileNavOpen && (
         <div
           onClick={() => setMobileNavOpen(false)}
-          className="md:hidden p-4 bg-gray-200 rounded-lg mt-2 flex flex-col gap-2 text-center z-0 absolute top-12 left-60 right-0"
+          className="md:hidden p-4 bg-gray-200 rounded-lg mt-2 flex flex-col gap-2 text-center z-0 fixed top-12  right-0"
         >
           <Link href="/">Home</Link>
           <Link href="project">Project</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/#about">About</Link>
           <Link href="/#contact">Contact</Link>
-          {/* <AuthLinks status={status} userName={userName} /> */}
-
-          <Link
-            className="bg-primary rounded-full text-white px-8 py-2"
-            href="/login"
-          >
-            login
-          </Link>
+          <AuthLinks status={status} userName={userName} />
         </div>
       )}
 
@@ -133,12 +131,9 @@ export default function Header() {
               </span>
             </div>
           </Link>
-          <Link
-            className="bg-primary rounded-full text-white px-8 py-2"
-            href="/login"
-          >
-            login
-          </Link>
+        </nav>
+        <nav className="flex items-center gap-4 text-gray-500 font-semibold">
+          <AuthLinks status={status} userName={userName} />
         </nav>
       </div>
     </header>

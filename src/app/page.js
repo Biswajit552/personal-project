@@ -30,7 +30,7 @@ export default function Home() {
         />
         <div className="mt-4">
           <a
-            href="tel:+91633265765"
+            href="tel:+919114683557"
             className="text-3xl text-gray-600 underline font-mono"
           >
             +91 9114683557
