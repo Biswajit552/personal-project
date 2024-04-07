@@ -49,7 +49,7 @@ export default function Hero() {
       </h1>
       {menuItems?.length > 0 &&
         menuItems.map((item, index) => (
-          <section className="mb- p-5">
+          <div className="mb- p-5" key={index}>
             <h1 className="text-4xl  text-center capitalize font-serif">
               {item.title}
             </h1>
@@ -68,7 +68,7 @@ export default function Hero() {
               </span>
               {item.description}
             </p>
-          </section>
+          </div>
         ))}
     </section>
   );
