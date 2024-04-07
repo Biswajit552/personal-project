@@ -42,8 +42,8 @@ export default function ImageSlider({ imageList }) {
       //     },
       //   }}
     >
-      {imageList?.map((item) => (
-        <SwiperSlide>
+      {imageList?.map((item, index) => (
+        <SwiperSlide key={index}>
           <div className="w-full h-auto object-cover ">
             <img src={item} alt="blog image" />
           </div>
