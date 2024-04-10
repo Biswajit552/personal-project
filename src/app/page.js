@@ -52,7 +52,7 @@ export default function Home() {
       </section>
       <section className="text-center my-16" id="about">
         <SectionHeaders subHeader={"Our story"} mainHeader={"About us"} />
-        <div className="max-w-md mx-auto mt-4 text-gray-500 flex flex-col gap-4 ">
+        <div className="max-w-md mx-auto mt-4 text-black flex flex-col gap-4 font-serif ">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ex
             soluta, ducimus labore nihil eos numquam beatae, iure architecto
@@ -75,7 +75,7 @@ export default function Home() {
         <div className="mt-4">
           <a
             href="tel:+919114683557"
-            className="text-3xl text-gray-600 underline font-mono"
+            className="text-3xl text-gray-900 underline font-mono"
           >
             +91 9114683557
           </a>
