@@ -16,7 +16,7 @@ export default function MenuItemForm({ onsubmit, menuItem }) {
           image,
         })
       }
-      className="mt-8 max-w-3xl mx-auto"
+      className="mt-16 max-w-3xl mx-auto"
     >
       <div
         className="flex md:flex-row flex-col items-start gap-4 "

@@ -24,7 +24,7 @@ export default function Blog() {
 
   return (
     <>
-      <div className="text-center mt-10 font-serif font-medium text-2xl">
+      <div className="text-center mt-14 font-serif font-medium text-2xl">
         <Link
           href={"/blog/create"}
           className="bg-primary text-white px-8 py-2 rounded-2xl"
@@ -36,7 +36,7 @@ export default function Blog() {
       {!loadingState ? (
         <>
           {menuItems?.map((item) => (
-            <div className="gap-4 flex mt-8" key={item}>
+            <div className="gap-4 flex mt-8 max-w-4xl mx-auto" key={item}>
               <Skeleton width="300px" height="200px" />
               <div className="flex flex-col gap-3">
                 <Skeleton width="250px" height="35px" />
@@ -52,7 +52,7 @@ export default function Blog() {
             {menuItems?.length > 0 &&
               menuItems.map((item) => (
                 <Link href={"/blog/" + item._id} key={item.id}>
-                  <div className="flex w-full mt-8 space-x-4 mb-5 ">
+                  <div className="flex w-full mt-8 space-x-4 mb-5 max-w-4xl mx-auto ">
                     {/*left*/}
                     <div className="w-[35%] h-[200px] flex justify-center items-center">
                       <img

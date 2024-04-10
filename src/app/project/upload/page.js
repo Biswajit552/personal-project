@@ -8,6 +8,8 @@ import {
 import { app } from "../../../firebase";
 import { useState } from "react";
 import { redirect } from "next/navigation";
+import { MdDelete } from "react-icons/md";
+
 export default function Upload() {
   const [files, setFiles] = useState([]);
   const [redirectToItems, setRedirectToItems] = useState(false);
@@ -121,8 +123,8 @@ export default function Upload() {
 
   return (
     <main className="p-3 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-semibold text-center my-7">
-        Create a Listing
+      <h1 className="text-3xl font-semibold text-center my-6 mt-10">
+        Website Details Upload
       </h1>
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
         <div className="flex flex-col gap-4 flex-1">
@@ -201,9 +203,9 @@ export default function Upload() {
                 <button
                   type="button"
                   onClick={() => handleRemoveImage(index)}
-                  className="p-3 text-red-700 rounded-lg uppercase hover:opacity-75"
+                  className="p-2 w-12 text-red-700 rounded-lg uppercase hover:opacity-75"
                 >
-                  Delete
+                  <MdDelete className="text-xl" />
                 </button>
               </div>
             ))}

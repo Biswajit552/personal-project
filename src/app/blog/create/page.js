@@ -38,6 +38,9 @@ export default function CreateBlog() {
 
   return (
     <section>
+      <div className="text-center mt-14 font-serif font-medium text-2xl underline">
+        <h1>Create a Blog</h1>
+      </div>
       <MenuItemForm onsubmit={handleCreate} menuItem={null} />
     </section>
   );
