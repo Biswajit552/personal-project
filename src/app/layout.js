@@ -15,12 +15,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="max-w-4xl p-4  mx-auto">
+        <main className=" pt-5 mx-auto  ">
           <AppProvider>
             <Header />
             <Toaster />
             {children}
-            <footer className="border-t p-8 text-center  text-gray-600 mt-12">
+            <footer className="border-t p-8 text-center  mt-12">
               &copy; 2024 All rights reserved
             </footer>
           </AppProvider>

@@ -9,7 +9,7 @@ function AuthLinks({ status, userName }) {
   if (status === "authenticated") {
     return (
       <>
-        <Link href={"/profile"} className="whitespace-nowrap">
+        <Link href={"/profile"} className="whitespace-nowrap text-white">
           Hello, {userName}
         </Link>
         <button
@@ -24,7 +24,9 @@ function AuthLinks({ status, userName }) {
   if (status === "unauthenticated") {
     return (
       <>
-        <Link href={"/login"}>Login</Link>
+        <Link href={"/login"} className="">
+          Login
+        </Link>
         <Link
           href={"/register"}
           className="bg-primary rounded-full text-white px-8 py-2"
@@ -35,7 +37,9 @@ function AuthLinks({ status, userName }) {
     );
   }
 }
+
 export default function Header() {
+  const [customerName, setCustomerName] = useState("");
   const session = useSession();
   const status = session?.status;
   const userData = session.data?.user;
@@ -46,8 +50,8 @@ export default function Header() {
     userName = userName.split(" ")[0];
   }
   return (
-    <header>
-      <div className="flex items-center md:hidden justify-between">
+    <header className=" ">
+      <div className="flex items-center md:hidden fixed top-0 right-0 left-0 gap-5 justify-between z-20 p-4  bg-slate-900 ">
         <Link
           href={"/"}
           className="text-primary font-semibold text-xl  font-serif"
@@ -57,6 +61,7 @@ export default function Header() {
             BISWAJIT
           </span>
         </Link>
+
         <button
           className="p-2 border w-14 fixed top-3 right-4"
           onClick={() => setMobileNavOpen((prev) => !prev)}
@@ -79,7 +84,11 @@ export default function Header() {
         </div>
       )}
 
-      <div className="hidden md:flex items-center justify-between  ">
+      <div
+        className="hidden md:flex items-center fixed top-0 right-0 left-0 gap-5 justify-around z-20 text-white p-3  bg-slate-950"
+        //   style="will-change: background; background-color: rgba(12, 12, 24, 0);"
+        //
+      >
         <Link
           className="text-primary font-semibold text-xl  font-serif"
           href="/"
@@ -102,7 +111,7 @@ export default function Header() {
           <Link href="/project" className="block overflow-hidden ">
             <div className="h-[20px] hover:-translate-y-5 hover:duration-300 duration-300">
               <span className="flex h-[20px] items-center"> Project</span>
-              <span className="flex h-[20px] items-center text-black">
+              <span className="flex h-[20px] items-center text-white">
                 Project
               </span>
             </div>
@@ -110,7 +119,7 @@ export default function Header() {
           <Link href="/blog" className="block overflow-hidden ">
             <div className="h-[20px] hover:-translate-y-5 hover:duration-300 duration-300">
               <span className="flex h-[20px] items-center">Blog</span>
-              <span className="flex h-[20px] items-center text-black">
+              <span className="flex h-[20px] items-center text-white">
                 Blog
               </span>
             </div>
@@ -118,7 +127,7 @@ export default function Header() {
           <Link href="/#about" className="block overflow-hidden ">
             <div className="h-[20px] hover:-translate-y-5 hover:duration-300 duration-300">
               <span className="flex h-[20px] items-center">About</span>
-              <span className="flex h-[20px] items-center text-black">
+              <span className="flex h-[20px] items-center text-white">
                 About
               </span>
             </div>
@@ -126,13 +135,13 @@ export default function Header() {
           <Link href="/#contact" className="block overflow-hidden ">
             <div className="h-[20px] hover:-translate-y-5 hover:duration-300 duration-300">
               <span className="flex h-[20px] items-center">Contact</span>
-              <span className="flex h-[20px] items-center text-black">
+              <span className="flex h-[20px] items-center text-white">
                 Contact
               </span>
             </div>
           </Link>
         </nav>
-        <nav className="flex items-center gap-4 text-gray-500 font-semibold">
+        <nav className="flex items-center gap-4 text-white font-semibold">
           <AuthLinks status={status} userName={userName} />
         </nav>
       </div>
