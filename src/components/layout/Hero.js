@@ -4,17 +4,17 @@ import Right from "../icons/Right";
 
 export default function Hero() {
   return (
-    <section className="mt-5 md:mt-10 scroll-smooth h-[710px]   md:h-[650px]  ">
+    <section className="mt-5 md:mt-10 scroll-smooth h-[750px]   md:h-[650px]  ">
       {/* <img src={"/laptop.jpg"} className="md:hidden fixed -z-10" alt="" /> */}
       <video
         autoPlay
         loop
-        className=" md:h-[710px] h-[710px]  w-full -z-10 fixed object-cover"
+        className=" md:h-[710px] h-[750px]  w-full -z-10 fixed object-cover"
       >
         <source src={"/hero2.mp4"} type="video/mp4" />
       </video>
       <div className=" md:py-5  flex flex-col  ">
-        <h1 className="hero-heading mt-[290px] ml-3  md:mx-6 text-xl font-serif md:text-5xl    md:mt-10 font-semibold space-x-3  ">
+        <h1 className="hero-heading mt-[320px] ml-3  md:mx-6 text-xl font-serif md:text-5xl    md:mt-10 font-semibold space-x-3  ">
           Everything
           <br />
           is better with A&nbsp;
