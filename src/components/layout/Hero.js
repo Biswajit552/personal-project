@@ -71,6 +71,7 @@ export default function Hero() {
     <section
       className="mt-5 md:mt-10 scroll-smooth h-[750px]   md:h-[650px]  "
       // id="welcome"
+      ref={comp}
     >
       {/* <img src={"/laptop.jpg"} className="md:hidden fixed -z-10" alt="" /> */}
       <video
