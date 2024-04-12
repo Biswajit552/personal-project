@@ -7,14 +7,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [menuItems, setMenuItems] = useState([]);
+  const [menuItems, setMenuItems] = useState(false);
 
   useEffect(() => {
     fetch("/api/project").then((res) => {
       res.json().then((web) => {
         setMenuItems(web);
       });
-      // setLoadingState(true);
     });
   }, []);
   return (
