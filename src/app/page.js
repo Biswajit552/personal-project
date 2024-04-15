@@ -5,6 +5,7 @@ import SectionHeaders from "@/components/layout/SectionHeaders";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
   const [menuItems, setMenuItems] = useState(false);
@@ -15,6 +16,14 @@ export default function Home() {
         setMenuItems(web);
       });
     });
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
   }, []);
   return (
     <>

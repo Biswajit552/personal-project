@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.540.0",
+    "@studio-freight/lenis": "^1.0.42",
     "bcrypt": "^5.1.1",
     "firebase": "^10.10.0",
     "gsap": "^3.12.5",

@@ -11,16 +11,11 @@ export default function Project() {
   const [loadingState, setLoadingState] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoadingState(true);
-    }, 2000);
-  });
-  useEffect(() => {
     fetch("/api/project").then((res) => {
       res.json().then((web) => {
         setMenuItems(web);
       });
-      // setLoadingState(true);
+      setLoadingState(true);
     });
   }, []);
   // console.log(menuItems);

@@ -8,19 +8,19 @@ export default function Blog() {
   const [loadingState, setLoadingState] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoadingState(true);
-    }, 2000);
+    // lenis.on("scroll", (e) => {
+    //   console.log(e);
+    // });
   });
   useEffect(() => {
     fetch("/api/create").then((res) => {
       res.json().then((blog) => {
         setMenuItems(blog);
       });
-      // setLoadingState(true);
+      setLoadingState(true);
     });
   }, []);
-  console.log(menuItems);
+  // console.log(menuItems);
 
   return (
     <>
